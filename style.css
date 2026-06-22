@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    font-family:'Noto Sans TC','sens-serif';
+    line-height: 1.6;
+    background-color: #e8efff;
+    color:#000000;
+  }
+
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #6683c0;
+    position:sticky;
+    top:0
+  }
+
+  .logo{
+    font-size: 1.5rem;
+    font-weight:bold;
+    color:#e8edff;
+  }
+  
+  .nav-link{
+    display:flex;
+    list-style: none;
+    gap: 20px;
+  }
+
+  .nav-link a {
+    text-decoration: none;
+    color: #dee2f0;
+    transition: 0.5s;
+  }
+
+  .nav-link a :hover{
+    color: #6683c0;
+  }
+
+.btn-chat{
+    background-color: #94b6ff;
+    color:#000000;
+    padding: 8px 20px;
+    border-radius :20px;
+    font-weight:bold;
+}  
+
+.hero{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 80px 10%;
+}
+
+.hero-content{
+    flex:1
+}
+
+.hero-content h1{
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.highlight{
+    color:#7cbcfd;
+}
+.hero-content p{
+    font-size: 1rem;
+    color: #747474;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    max-width: 500px;
+}
+
+.hero-button{
+    display: flex;
+    gap: 20px;
+
+}
+
+button{
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    border:none
+}
+
+.btn-primary{
+    background-color: #94b6ff;
+    color: #252525;
+}
+
+.btn-secondary{
+    background-color: #b2d0f2;
+    color: #000000;
+
+}
+button:hover{
+    opacity: 0.5;
+}
+
+.hero-image{
+    flex:1;
+    display: flex;
+    gap: 20px;
+}
+
+.hero-image img{
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 50;
+}
+ .chat-box{
+    display:flex;
+    gap: 10px;
+    margin: 15px;
+    max-width: 500px;
+ }
+
+ #user-input{
+    flex: 1;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid #1e42af;
+    background-color: #252525;
+    color: #e8edff;
+    font-size: 1rem;
+    outline: none;
+    transition:0.3s;
+ }
+
+ #user-input:focus{
+    border-color: #9ed7fc;
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+ }
+
+ #ai-response{
+    font-size: 1.1rem;
+    color:  #617fc1;
+    font-weight: bold;
+    min-width: 1.6rem;
+ }
+
+@media screen and (max-width:800px) {
+    .navbar{
+        padding: 15px 5%;
+    }
+    
+    .nav-link{
+        display:none
+    }
+    .hero{
+        flex-direction: column;
+        text-align: center;
+        padding:40px 5%
+    }
+
+    .hero-content h1{
+        font-size: 2rem;
+    }
+
+    .hero-button{
+        justify-content: center;
+    }
+
+    .hero-image{
+        margin-top: 40px;
+    }
+}
+
+
+body{
+    transition:background-color 0.5s, color 2s;
+}
+/* 淺色主題 */
+
+body.theme-light{
+    background-color: #f0f3fc;
+    color: #617fc1;
+}
+
+body.theme-light .navbar {
+    background-color: #d1d7d7;
+}
+
+body.theme-light .logo {
+    color: #141231;
+}
+
+body.theme-light .nav-link a {
+    color: #000000;
+}
+
+/* 駭客主題 */
+
+body.theme-matrix{
+    background-color: #1c201d;
+    color: #c7ff4f;
+}
+
+body.theme-matrix .navbar {
+    background-color: #a0fc8e;
+}
+
+body.theme-matrix .logo {
+    color: #000000;
+}
+
+body.theme-matrix .nav-link a {
+    color: #000000;
+}
+
+.hidden {
+    display: none;
+}
+
+.todo-container {
+    max-width: 500px;
+    margin: 20px auto 0;
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+.todo-container input,
+.todo-container select {
+    margin: 5px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #1e42af;
+}
+
+.todo-container button {
+    margin: 5px;
+}
+
+.todo-time-picker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+#todo-list {
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    gap: 10px;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #ccc;
+}
