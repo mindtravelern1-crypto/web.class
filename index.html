@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>響應式網頁</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo" id="main-logo"> 13135012 林恩瑜</div>
+        <ul class="nav-link">
+            <li><a href='#'>首頁</a></li>
+            <li><a href='#'>關於</a></li>
+            <li><a href='#'>作品集</a></li>
+            <li><a href='#' class="btn-chat">聯絡我</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-content">
+        <h1 id="hero-logo" >我的未來由<span class="highlight">AY</span>主宰</h1>
+        <p>這是一個使用純 HTML 與 CSS 製作的響
+          應式網頁，展示基本的排版與版面配置技巧。</p>
+
+          <div class="chat-box">
+            <input type="text" id="user-input" placeholder="請輸入指令：你好、學校、功能...">
+            <button id="send-btn" class="btn-primary">發送指令</button>
+          </div>
+          <p id="ai-response">AI 助理:等待指令中...</p>
+
+
+          <div class="hero-button">
+            <button class=" btn-primary" onclick="changeColor()">變換顏色</button>
+           <button class="btn-secondary" id="todo-toggle-btn">待辦清單</button>
+          </div>
+
+          <div class="todo-container hidden" id="todo-section">
+            <h2>我的待辦事項</h2>
+            <input type="text" id="todo-input" placeholder="請輸入提醒事項">
+            <div class="todo-time-picker">
+              <input type="date" id="todo-date">
+              <select id="todo-hour"></select>
+              <span>:</span>
+              <select id="todo-minute"></select>
+            </div>
+            <button class="btn-primary" onclick="addTodo()">確定新增</button>
+            <ul id="todo-list"></ul>
+          </div>
+
+      </div>
+
+      <div class="hero-image">
+        <img src="首頁圖片.jpg" alt="首頁圖片">
+
+      </div> 
+    
+    </header>
+    <script src="./java.js"></script>
+    <script>(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="1YRNZoRE7uc1sUTWXdWuK";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();</script>
+</body>
+</html>
